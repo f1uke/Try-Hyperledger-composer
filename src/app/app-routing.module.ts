@@ -22,8 +22,6 @@ const routes: Routes = [
   { path: 'addTrader', component: AddTraderComponent },
 
   { path: 'Trad', component: TradComponent },
-  
-
 
   { path: '**', redirectTo: '' }
 
