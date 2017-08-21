@@ -1,0 +1,61 @@
+<p>
+	กรอกชื่อ owner!
+</p>
+<div>
+	<input [(ngModel)]="getText" type="text"> {{getText}}
+</div>
+
+<button (click)="letSearch()">Search</button>
+<br> {{result}}
+
+<div class="container">
+	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+		<strong>Error:</strong> {{errorMessage}}
+	</div>
+	<h1 id='assetName'>ผลการค้นหา</h1>
+	<!-- <div class="row">
+			<div class="col-md-12 text-right">
+				<button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">Add Asset</button>
+			</div>
+		</div> -->
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-bordered table-responsive table-striped">
+				<thead class="thead">
+					<tr class="thead-cols">
+
+						<th class="info">productName</th>
+
+						<th class="info">description</th>
+
+						<th class="info">quantity</th>
+
+						<th class="info">owner</th>
+
+						<!-- <th class="info">Actions</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let asset of result">
+
+
+						<td>{{asset.productName}}</td>
+
+						<td>{{asset.description}}</td>
+
+						<td>{{asset.quantity}}</td>
+
+						<td>{{asset.owner}}</td>
+
+						<!-- <td>
+								<button (click)="getForm(asset.productName);" type="button" class="btn btn-success" data-toggle="modal" data-target="#updateAssetModal">Update Asset</button>
+
+								<button (click)="setId(asset.productName);" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteAssetModal">Delete Asset</button>
+							</td> -->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
