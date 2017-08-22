@@ -97,6 +97,13 @@ export class DataService<Type> {
 
     }
 
+    public send(ns: string, data: Type): Observable<Type> {
+        return this.http.post(this.actionUrl + ns, data)
+        .map(this.extractData)
+        .catch(this.handleError);
+
+    }
+
    
 
 }
