@@ -14,6 +14,7 @@ import { SearchComponent } from './search/search.component';
 import { SearchOwnerComponent } from './search-owner/search-owner.component';
 import { AddTraderComponent } from './add-trader/add-trader.component';
 import { TradComponent } from './trad/trad.component';
+import { TransectionComponent } from './transection/transection.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TradComponent } from './trad/trad.component';
     SearchComponent,
     SearchOwnerComponent,
     AddTraderComponent,
-    TradComponent
+    TradComponent,
+    TransectionComponent
 		
   ],
   imports: [

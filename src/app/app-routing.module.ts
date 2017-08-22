@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { SearchOwnerComponent } from './search-owner/search-owner.component';
 import { AddTraderComponent } from './add-trader/add-trader.component';
 import { TradComponent } from './trad/trad.component';
+import { TransectionComponent } from './transection/transection.component';
 
 const routes: Routes = [
   // { path: 'transaction', component: TransactionComponent },
@@ -23,6 +24,8 @@ const routes: Routes = [
 
   { path: 'Trad', component: TradComponent },
 
+  { path: 'Transec', component: TransectionComponent },
+  
   { path: '**', redirectTo: '' }
 
 ];
